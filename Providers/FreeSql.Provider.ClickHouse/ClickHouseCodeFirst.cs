@@ -187,7 +187,7 @@ namespace FreeSql.ClickHouse
 
                             sb.Remove(sb.Length - 1, 1);
                             sb.Append("\r\n) ");
-                            sb.Append("\r\nENGINE = MergeTree()");
+                            sb.Append("\r\nENGINE = ReplacingMergeTree()");
 
                             if (tb.Primarys.Any())
                             {
@@ -403,7 +403,7 @@ where a.database in ({0}) and a.table in ({1})", tboldname ?? tbname);
 
                     sb.Remove(sb.Length - 1, 1);
                     sb.Append("\r\n) ");
-                    sb.Append("\r\nENGINE = MergeTree()");
+                    sb.Append("\r\nENGINE = ReplacingMergeTree()");
 
                     if (tb.Primarys.Any())
                     {
